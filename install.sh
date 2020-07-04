@@ -56,7 +56,7 @@ cd ~/Downloads
 git clone https://github.com/input-output-hk/cardano-node.git
 cd cardano-node
 git fetch --all --tags
-git tag
+#'git tag' to list tags
 git checkout tags/1.14.2
 cabal install cardano-node cardano-cli --installdir="$HOME/.local/bin" --overwrite-policy=always
 echo "Cardano Node Version: $(cardano-node version)"
