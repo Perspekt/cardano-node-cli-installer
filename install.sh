@@ -36,8 +36,8 @@ mv cabal ~/.local/bin/
 #Adding ~/.local/bin and ~/.cabal/bin to the PATH
 #https://github.com/input-output-hk/cardano-tutorials/blob/master/node-setup/000_install.md
 #Add Manually to end of ~/.bashrc
-echo "export PATH=\"~/.taco/bin:\$PATH\"" >> ~/.bashrc
-echo "export PATH=\"~/.taco/bin:\$PATH\"" >> ~/.bashrc
+echo "export PATH=\"~/.local/bin:\$PATH\"" >> ~/.bashrc
+echo "export PATH=\"~/.cabal/bin:\$PATH\"" >> ~/.bashrc
 source ~/.bashrc
 cabal update
 
