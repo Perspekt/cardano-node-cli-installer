@@ -11,4 +11,5 @@ ADA - Ae2tdPwUPEZLDAevcnLc3kd99nApjNJ4ZzLRBo32H1a3jqFEA6WhcyVs1ZV <br />
 2. cd cardano-node-cli-installer
 3. chmod +x ./install.sh
 4. ./install.sh
-5. Run 'source ~/.bashrc'
+5. source ~/.bashrc - #Reload bashrc
+6. cardano-node version && cardano-cli version - #Run to get versions and confirm
