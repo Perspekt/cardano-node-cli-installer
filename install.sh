@@ -20,11 +20,9 @@ mv cabal ~/.local/bin/
 
 
 #Adding ~/.local/bin and ~/.cabal/bin to the PATH
-#https://github.com/input-output-hk/cardano-tutorials/blob/master/node-setup/000_install.md
-alias brc='source ~/.bashrc'
+#RUN 'source ~/.bashrc' AFTER SCRIPT RUNS!!
 echo "export PATH=\"~/.local/bin:\$PATH\"" >> ~/.bashrc
 echo "export PATH=\"~/.cabal/bin:\$PATH\"" >> ~/.bashrc
-brc
 cabal update
 
 
@@ -61,8 +59,11 @@ git checkout tags/1.14.2
 cabal install cardano-node cardano-cli --installdir="$HOME/.local/bin" --overwrite-policy=always
 
 #Validate
+echo "==========================================================================================="
 echo "Cardano Node Version: $(cardano-node version)"
 echo "Cardano CLI Version: $(cardano-cli version)"
+echo "==========================================================================================="
+#Needs validation check
 
 
 
