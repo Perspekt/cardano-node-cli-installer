@@ -63,7 +63,7 @@ cabal install cardano-node cardano-cli --installdir="$HOME/.local/bin" --overwri
 
 #Validate
 echo "==========================================================================================="
-echo "Cardano Node Versin: $(cardano-node version)"
+echo "Cardano Node Version: $(cardano-node version)"
 echo "Cardano CLI Version: $(cardano-cli version)"
 echo "==========================================================================================="
 #Needs validation check
