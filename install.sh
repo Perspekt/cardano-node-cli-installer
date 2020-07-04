@@ -56,16 +56,15 @@ cd cardano-node
 git fetch --all --tags
 #'git tag' to list tags
 git checkout tags/1.14.2
-cabal install cardano-node cardano-cli # --installdir="$HOME/.local/bin" --overwrite-policy=always
-cabal build all
-cp -p dist-newstyle/build/x86_64-linux/ghc-8.6.5/cardano-node-1.14.0/x/cardano-node/build/cardano-node/cardano-node ~/.local/bin/
-cp -p dist-newstyle/build/x86_64-linux/ghc-8.6.5/cardano-cli-1.14.0/x/cardano-cli/build/cardano-cli/cardano-cli ~/.local/bin/
+cabal install cardano-node cardano-cli --installdir="$HOME/.local/bin" --overwrite-policy=always
+
+
 echo "Cardano Node Version: $(cardano-node version)"
 echo "Cardano CLI Version: $(cardano-cli version)"
 
 
 
 
-
+#cabal build all
 #cp -p dist-newstyle/build/x86_64-linux/ghc-8.6.5/cardano-node-1.14.0/x/cardano-node/build/cardano-node/cardano-node ~/.local/bin/
 #cp -p dist-newstyle/build/x86_64-linux/ghc-8.6.5/cardano-cli-1.14.0/x/cardano-cli/build/cardano-cli/cardano-cli ~/.local/bin/
