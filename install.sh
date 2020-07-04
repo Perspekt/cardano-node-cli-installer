@@ -58,11 +58,12 @@ cd cardano-node
 git fetch --all --tags
 #'git tag' to list tags
 git checkout tags/1.14.2
+echo -e "package cardano-crypto-praos\n  flags: -external-libsodium-vrf" > cabal.project.local
 cabal install cardano-node cardano-cli --installdir="$HOME/.local/bin" --overwrite-policy=always
 
 #Validate
 echo "==========================================================================================="
-echo "Cardano Node Version: $(cardano-node version)"
+echo "Cardano Node Versin: $(cardano-node version)"
 echo "Cardano CLI Version: $(cardano-cli version)"
 echo "==========================================================================================="
 #Needs validation check
