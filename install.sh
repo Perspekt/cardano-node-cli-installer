@@ -8,18 +8,6 @@ sudo apt-get install git -y
 mkdir ~/Downloads
 cd ~/Downloads
 
-git clone https://github.com/input-output-hk/libsodium
-
-cd libsodium
-git checkout 66f017f1
-./autogen.sh
-./configure
-make
-sudo make install
-
-export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
-
-
 
 #Install Cabal
 cd ~/Downloads
@@ -39,6 +27,7 @@ echo "export PATH=\"~/.cabal/bin:\$PATH\"" >> ~/.bashrc
 brc
 cabal update
 
+
 #Install GHC
 cd ~/Downloads
 wget https://downloads.haskell.org/~ghc/8.6.5/ghc-8.6.5-x86_64-deb9-linux.tar.xz
@@ -47,6 +36,19 @@ rm ghc-8.6.5-x86_64-deb9-linux.tar.xz
 cd ghc-8.6.5
 ./configure
 sudo make install
+
+
+#Install Libsodium
+cd ~/Downloads
+git clone https://github.com/input-output-hk/libsodium
+cd libsodium
+git checkout 66f017f1
+./autogen.sh
+./configure
+make
+sudo make install
+
+export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
 
 
 # Build cardano-node cardano-cli
@@ -58,7 +60,7 @@ git fetch --all --tags
 git checkout tags/1.14.2
 cabal install cardano-node cardano-cli --installdir="$HOME/.local/bin" --overwrite-policy=always
 
-
+#Validate
 echo "Cardano Node Version: $(cardano-node version)"
 echo "Cardano CLI Version: $(cardano-cli version)"
 
