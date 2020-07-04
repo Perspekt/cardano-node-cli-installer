@@ -21,6 +21,8 @@ mv cabal ~/.local/bin/
 
 #Adding ~/.local/bin and ~/.cabal/bin to the PATH
 #RUN 'source ~/.bashrc' AFTER SCRIPT RUNS!!
+export PATH="~/.local/bin:$PATH"
+export PATH="~/.cabal/bin:$PATH"
 echo "export PATH=\"~/.local/bin:\$PATH\"" >> ~/.bashrc
 echo "export PATH=\"~/.cabal/bin:\$PATH\"" >> ~/.bashrc
 cabal update
