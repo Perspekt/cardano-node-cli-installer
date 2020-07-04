@@ -9,4 +9,5 @@ ADA - Ae2tdPwUPEZLDAevcnLc3kd99nApjNJ4ZzLRBo32H1a3jqFEA6WhcyVs1ZV <br />
 # Instructions:
 1. git clone https://github.com/antaresx8/cardano-node-cli-installer.git
 2. cd cardano-node-cli-installer
-3. ./install.sh
+3. chmod +x ./install.sh
+4. ./install.sh
